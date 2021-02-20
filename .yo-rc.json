@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "xyz.ttooc.laboratory"
+    },
+    "jhipsterVersion": "6.9.0",
+    "applicationType": "monolith",
+    "baseName": "laboratory",
+    "packageName": "xyz.ttooc.laboratory",
+    "packageFolder": "xyz/ttooc/laboratory",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OGExODliMWVmMWM1M2ZlNGRiNGE5ZTFiMTkzNGEzZDAyMzJlMTdjMzE1MmE3NmQwOGEwZmUzNDFkMmFjMWM4Yjk2YzgyOWIzMTQ5Yzc4NTIwZDk4M2M1OWRhMzhhODE2ODI4Y2VmZDViMTdkZmQ5ZjY0ZTkwYjk0NWNkODNhNzA=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1613792751482,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
