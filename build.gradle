@@ -3,7 +3,13 @@ buildscript {
         mavenLocal()
         mavenCentral()
         gradlePluginPortal()
-        maven { url "https://repo.spring.io/plugins-release" }
+        maven {
+            url "https://repo.ttooc.xyz/repository/maven-public/"
+            credentials {
+                username "cicd"
+                password "cicd123###"
+            }
+        }
     }
     dependencies {
         //jhipster-needle-gradle-buildscript-dependency - JHipster will add additional gradle build script plugins here
@@ -278,6 +284,13 @@ dependencies {
     testRuntimeOnly "com.tngtech.archunit:archunit-junit5-engine:${archunit_junit5_version}"
     testImplementation "com.h2database:h2"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
+    implementation (group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.4.0'){
+        exclude group : 'com.lowagie' , module: 'itext'
+    }
+    implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.2'
+    implementation group: 'com.lowagie', name: 'itext', version: '2.1.7'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.18'
+    implementation group: 'oracle', name: 'oracle-jdbc', version: '11.2.0.3.0'
 }
 
 if (project.hasProperty("gae")) {

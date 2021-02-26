@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5c680e02-613b-490c-9b85-e24ae54844a3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="f66faafc-d607-4f1d-b4a8-37af22a4c0e1">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT *
+FROM longsun_hb.order_order
+WHERE 
+1 = 1 
+]]>
+		</queryString>
+		<field name="id" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="id"/>
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="complete_by" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="complete_by"/>
+			<property name="com.jaspersoft.studio.field.label" value="complete_by"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="complete_time" class="java.sql.Timestamp">
+			<property name="com.jaspersoft.studio.field.name" value="complete_time"/>
+			<property name="com.jaspersoft.studio.field.label" value="complete_time"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="create_by" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="create_by"/>
+			<property name="com.jaspersoft.studio.field.label" value="create_by"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="create_time" class="java.sql.Timestamp">
+			<property name="com.jaspersoft.studio.field.name" value="create_time"/>
+			<property name="com.jaspersoft.studio.field.label" value="create_time"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="deal_date" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.name" value="deal_date"/>
+			<property name="com.jaspersoft.studio.field.label" value="deal_date"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="device" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="device"/>
+			<property name="com.jaspersoft.studio.field.label" value="device"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="json" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="json"/>
+			<property name="com.jaspersoft.studio.field.label" value="json"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="mall" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="mall"/>
+			<property name="com.jaspersoft.studio.field.label" value="mall"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="mall_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="mall_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="mall_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="order_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="order_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="order_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="own_store" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="own_store"/>
+			<property name="com.jaspersoft.studio.field.label" value="own_store"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="own_store_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="own_store_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="own_store_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="pause" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="pause"/>
+			<property name="com.jaspersoft.studio.field.label" value="pause"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="point" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="point"/>
+			<property name="com.jaspersoft.studio.field.label" value="point"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="point_is_clear" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="point_is_clear"/>
+			<property name="com.jaspersoft.studio.field.label" value="point_is_clear"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ref_order_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="ref_order_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="ref_order_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="skipcrm" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="skipcrm"/>
+			<property name="com.jaspersoft.studio.field.label" value="skipcrm"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="skiperp" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="skiperp"/>
+			<property name="com.jaspersoft.studio.field.label" value="skiperp"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="source" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="source"/>
+			<property name="com.jaspersoft.studio.field.label" value="source"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="start_time" class="java.sql.Timestamp">
+			<property name="com.jaspersoft.studio.field.name" value="start_time"/>
+			<property name="com.jaspersoft.studio.field.label" value="start_time"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="status" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="status"/>
+			<property name="com.jaspersoft.studio.field.label" value="status"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="status_text" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="status_text"/>
+			<property name="com.jaspersoft.studio.field.label" value="status_text"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="store" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="store"/>
+			<property name="com.jaspersoft.studio.field.label" value="store"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="store_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="store_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="store_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="sync_toerp" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="sync_toerp"/>
+			<property name="com.jaspersoft.studio.field.label" value="sync_toerp"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="sync_toerpcount" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="sync_toerpcount"/>
+			<property name="com.jaspersoft.studio.field.label" value="sync_toerpcount"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="till_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="till_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="till_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="timestamp" class="java.sql.Timestamp">
+			<property name="com.jaspersoft.studio.field.name" value="timestamp"/>
+			<property name="com.jaspersoft.studio.field.label" value="timestamp"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="total_actual_amt" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="total_actual_amt"/>
+			<property name="com.jaspersoft.studio.field.label" value="total_actual_amt"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="total_amt" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="total_amt"/>
+			<property name="com.jaspersoft.studio.field.label" value="total_amt"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="type" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="type"/>
+			<property name="com.jaspersoft.studio.field.label" value="type"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="user_id" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="user_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="user_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="uuid" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="uuid"/>
+			<property name="com.jaspersoft.studio.field.label" value="uuid"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="version" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="version"/>
+			<property name="com.jaspersoft.studio.field.label" value="version"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="vip_code" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="vip_code"/>
+			<property name="com.jaspersoft.studio.field.label" value="vip_code"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="vip_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="vip_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="vip_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString>
+		<![CDATA[select * from order_order]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="complete_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="complete_by"/>
+		<property name="com.jaspersoft.studio.field.label" value="complete_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="complete_time" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="complete_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="complete_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="create_by" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="create_by"/>
+		<property name="com.jaspersoft.studio.field.label" value="create_by"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="create_time" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="create_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="create_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deal_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="deal_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="deal_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="device" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="device"/>
+		<property name="com.jaspersoft.studio.field.label" value="device"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="json" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="json"/>
+		<property name="com.jaspersoft.studio.field.label" value="json"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mall" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mall"/>
+		<property name="com.jaspersoft.studio.field.label" value="mall"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mall_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mall_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="mall_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="order_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="order_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="order_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="own_store" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="own_store"/>
+		<property name="com.jaspersoft.studio.field.label" value="own_store"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="own_store_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="own_store_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="own_store_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pause" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="pause"/>
+		<property name="com.jaspersoft.studio.field.label" value="pause"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="point" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="point"/>
+		<property name="com.jaspersoft.studio.field.label" value="point"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="point_is_clear" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="point_is_clear"/>
+		<property name="com.jaspersoft.studio.field.label" value="point_is_clear"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ref_order_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ref_order_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="ref_order_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="skipcrm" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="skipcrm"/>
+		<property name="com.jaspersoft.studio.field.label" value="skipcrm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="skiperp" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="skiperp"/>
+		<property name="com.jaspersoft.studio.field.label" value="skiperp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="source" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="source"/>
+		<property name="com.jaspersoft.studio.field.label" value="source"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="start_time" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="start_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="start_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_text" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status_text"/>
+		<property name="com.jaspersoft.studio.field.label" value="status_text"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="store" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="store"/>
+		<property name="com.jaspersoft.studio.field.label" value="store"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="store_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="store_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="store_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sync_toerp" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="sync_toerp"/>
+		<property name="com.jaspersoft.studio.field.label" value="sync_toerp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sync_toerpcount" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="sync_toerpcount"/>
+		<property name="com.jaspersoft.studio.field.label" value="sync_toerpcount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="till_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="till_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="till_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="timestamp" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="timestamp"/>
+		<property name="com.jaspersoft.studio.field.label" value="timestamp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_actual_amt" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_actual_amt"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_actual_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_amt" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_amt"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_amt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="type"/>
+		<property name="com.jaspersoft.studio.field.label" value="type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="user_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="user_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="user_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="uuid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="uuid"/>
+		<property name="com.jaspersoft.studio.field.label" value="uuid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="version" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="version"/>
+		<property name="com.jaspersoft.studio.field.label" value="version"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vip_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vip_code"/>
+		<property name="com.jaspersoft.studio.field.label" value="vip_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vip_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vip_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="vip_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_order"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="590" height="66" uuid="bb28bda6-de9f-4675-a5c0-20d7f3fd98fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[测试报表]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="54" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="170">
+			<componentElement>
+				<reportElement x="-12" y="10" width="580" height="160" uuid="0383b7f8-8c17-4a0a-b69d-3bc28de9c2f6">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+					<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="439f8123-55d8-4681-9104-d9ac33dac56a">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="134" uuid="856259f9-d7f7-44da-952d-0bd5b4b61178">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="134" height="30" uuid="951027db-8d7f-4d9d-b8bf-a7c009dec67f"/>
+								<text><![CDATA[ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="134" height="30" uuid="161fdd9e-6162-42e2-9124-87165824ca89"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="160" uuid="cf6d14d0-fc14-4aa9-a544-e4e2b72bbfbc">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="160" height="30" uuid="2dc80150-14c5-4a56-a90f-c4ea2233dfb7"/>
+								<text><![CDATA[订单号]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="160" height="30" uuid="2fc49557-01ba-404c-8aba-5236a00e8204"/>
+								<textFieldExpression><![CDATA[$F{order_id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="161" uuid="e2a44ab8-1869-474b-96bb-3b97d35aca25">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="161" height="30" uuid="fedd6958-5ea4-4272-96d3-c3ac52964fc4"/>
+								<text><![CDATA[状态]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="161" height="30" uuid="afa6c66e-d887-4fd7-a462-86b18575aa5b"/>
+								<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="125" uuid="032cd920-4c42-43d1-97bb-4a1445bb3483">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table 1_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="125" height="30" uuid="03b24e2a-d325-4b85-ba37-7322e23851cc"/>
+								<text><![CDATA[状态描述]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="125" height="30" uuid="63381597-194a-493f-b18c-04875cee4471"/>
+								<textFieldExpression><![CDATA[$F{status_text}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
