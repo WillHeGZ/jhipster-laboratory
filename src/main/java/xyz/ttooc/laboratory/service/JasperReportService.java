@@ -1,7 +1,5 @@
 package xyz.ttooc.laboratory.service;
 
-import liquibase.pro.packaged.J;
-import net.sf.jasperreports.components.table.Cell;
 import net.sf.jasperreports.components.table.DesignCell;
 import net.sf.jasperreports.components.table.StandardColumn;
 import net.sf.jasperreports.components.table.StandardTable;
@@ -11,16 +9,12 @@ import net.sf.jasperreports.engine.base.JRBoxPen;
 import net.sf.jasperreports.engine.component.ComponentKey;
 import net.sf.jasperreports.engine.design.*;
 import net.sf.jasperreports.engine.export.HtmlExporter;
-import net.sf.jasperreports.engine.fill.JREvaluator;
 import net.sf.jasperreports.engine.type.*;
-import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleHtmlExporterOutput;
-import org.omg.IOP.TAG_ALTERNATE_IIOP_ADDRESS;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
-import javax.rmi.PortableRemoteObject;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.awt.*;
@@ -29,7 +23,6 @@ import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Queue;
 
 @Service
 public class JasperReportService {
@@ -43,7 +36,7 @@ public class JasperReportService {
 
     public void compileReport(HttpServletResponse response) throws JRException, SQLException, IOException {
         response.setContentType("text/html");
-        String sql = "SELECT order_id,store_name ,total_amt ,status_text from order_order oo where device = '114ecabae5eaa17b'";
+        String sql = "SELECT order_id,store_name ,total_amt ,status_text from order_order";
 
         JasperDesign jasperDesign = new JasperDesign();
         jasperDesign.setName("NoXmlDesignReport");
@@ -101,10 +94,16 @@ public class JasperReportService {
         tableTDStyle.getLineBox().copyRightPen(tableTDBoxPen);
         jasperDesign.addStyle(tableTDStyle);
 
-        JRDesignParameter parameter = new JRDesignParameter();
-        parameter.setName("ReportTitle");
-        parameter.setValueClass(java.lang.String.class);
-        jasperDesign.addParameter(parameter);
+        JRDesignParameter titleParameter = new JRDesignParameter();
+        titleParameter.setName("ReportTitle");
+        titleParameter.setValueClass(java.lang.String.class);
+        titleParameter.setDescription("titleParameter");
+        jasperDesign.addParameter(titleParameter);
+        JRDesignParameter deviceParameter = new JRDesignParameter();
+        deviceParameter.setName("device");
+        deviceParameter.setValueClass(java.lang.String.class);
+        deviceParameter.setDescription("deviceParameter");
+        jasperDesign.addParameter(deviceParameter);
 
         JRDesignField field = new JRDesignField();
         field.setName("order_id");
@@ -170,11 +169,14 @@ public class JasperReportService {
         JRDesignStaticText staticText = null;
 
 
-        JRDesignDataset subDataset = new JRDesignDataset(true);
+        JRDesignDataset subDataset = new JRDesignDataset(false);
         JRDesignQuery query = new JRDesignQuery();
         query.setLanguage("SQL");
         query.setText(sql);
         subDataset.setQuery(query);
+
+        subDataset.addParameter(titleParameter);
+        subDataset.addParameter(deviceParameter);
 
         subDataset.setName("subDataSet");
         field = new JRDesignField();
@@ -200,14 +202,14 @@ public class JasperReportService {
         // datasource
         JRDesignDatasetParameter param = new JRDesignDatasetParameter();
         param.setName("REPORT_DATA_SOURCE");
-        JRDesignExpression exp = new JRDesignExpression("$P{parameter}");
-        param.setExpression(exp);
+        expression = new JRDesignExpression("$P{parameter}");
+        param.setExpression(expression);
         // datasetrun
         JRDesignDatasetRun dsr = new JRDesignDatasetRun();
         dsr.setDatasetName(subDataset.getName());
-        JRDesignExpression jrDesignExpression = new JRDesignExpression();
-        jrDesignExpression.setText("$P{REPORT_CONNECTION}");
-        dsr.setConnectionExpression(jrDesignExpression);
+        expression = new JRDesignExpression();
+        expression.setText("$P{REPORT_CONNECTION}");
+        dsr.setConnectionExpression(expression);
 //        dsr.addParameter(param);
         table.setDatasetRun(dsr);
 
@@ -370,7 +372,8 @@ public class JasperReportService {
         reportElement.setHeight(60);
         JRDesignPropertyExpression propertyExpression = new JRDesignPropertyExpression();
         propertyExpression.setName("com.jaspersoft.studio.layout");
-        JRDesignExpression propertyValueExpression = new JRDesignExpression();
+        JRDesignExpression propertyValueExpression = expression;
+        propertyValueExpression = new JRDesignExpression();
         propertyValueExpression.setText("com.jaspersoft.studio.editor.layout.VerticalRowLayout");
         propertyExpression.setValueExpression(propertyValueExpression);
         reportElement.addPropertyExpression(propertyExpression);
@@ -397,13 +400,13 @@ public class JasperReportService {
         JRDesignElementGroup jrDesignElementGroup = new JRDesignElementGroup();
         jrDesignElementGroup.addElement(reportElement);
         componentElement.setElementGroup(jrDesignElementGroup);
-        componentElement.setComponentKey(new ComponentKey("http://jasperreports.sourceforge.net/jasperreports/components","jr", "table"));
+        componentElement.setComponentKey(new ComponentKey("http://jasperreports.sourceforge.net/jasperreports/components", "jr", "table"));
 
         band = new JRDesignBand();
         band.setHeight(95);
         band.addElement(componentElement);
 
-        ((JRDesignSection)jasperDesign.getDetailSection()).addBand(band);
+        ((JRDesignSection) jasperDesign.getDetailSection()).addBand(band);
 
         jasperDesign.setQuery(query);
 
@@ -411,6 +414,7 @@ public class JasperReportService {
 
         Map<String, Object> parameterMap = new HashMap<>();
         parameterMap.put("ReportTitle", "Test Jasper Design");
+        parameterMap.put("device","114ecabae5eaa17b");
 
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameterMap, dataSource.getConnection());
 
